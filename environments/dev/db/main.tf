@@ -18,5 +18,7 @@ module "dev-db" {
   rds_subnet_group                 = "${var.rds_subnet_group}"
   rds_engine                       = "${var.rds_engine}"
   rds_engine_version               = "${var.rds_engine_version}"
+  rds_instance_zone1               = "${var.rds_instance_zone1}"
+  rds_instance_zone2               = "${var.rds_instance_zone2}"
 
 }

@@ -5,8 +5,16 @@
  * Date: Since July 28th, 2019
  */
 
-resource "aws_rds_cluster_instance" "cluster_instances" {
-  identifier = "${var.rds_cluster_name}-instance"
+resource "aws_rds_cluster_instance" "cluster_instance1" {
+  identifier = "${var.rds_cluster_name}-instance01"
+  cluster_identifier = "${aws_rds_cluster.cluster.id}"
+  instance_class = "${var.rds_instance_class}"
+  engine = "${var.rds_engine}"
+  engine_version = "${var.rds_engine_version}"
+}
+
+resource "aws_rds_cluster_instance" "cluster_instance2" {
+  identifier = "${var.rds_cluster_name}-instance02"
   cluster_identifier = "${aws_rds_cluster.cluster.id}"
   instance_class = "${var.rds_instance_class}"
   engine = "${var.rds_engine}"

@@ -37,5 +37,7 @@ module "db" {
   rds_database_name = "sample_rds"
   rds_subnet_group = "${module.subnet-groups.db_main_subnet_groups-env}"
   rds_engine = "aurora-mysql"
-  rds_engine_version = "5.7"
+  rds_engine_version = "5.7.mysql_aurora.2.04.2"
+  rds_instance_zone1 = "us-east-1a"
+  rds_instance_zone2 = "us-east-1b"
 }
